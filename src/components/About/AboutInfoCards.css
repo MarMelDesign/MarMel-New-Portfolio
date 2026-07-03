@@ -1,0 +1,245 @@
+.mh-about-cards {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background: var(--color-burgundy);
+  border-radius: 0 0 44px 44px;
+  padding: clamp(20px, 3vw, 24px);
+  gap: 24px;
+}
+
+.mh-about-cards__row {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 0 clamp(0px, 2vw, 24px);
+  gap: 24px;
+}
+
+.mh-about-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 240px;
+  height: 240px;
+  border-radius: 28px;
+  border: 0.5px solid rgba(250, 241, 230, 0.5);
+  box-shadow: 0 18px 40px rgba(92, 15, 28, 0.12);
+  padding: 24px;
+  overflow: hidden;
+}
+
+.mh-about-card__label {
+  position: relative;
+  z-index: 2;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.76px;
+  text-transform: uppercase;
+  color: #c56a4f;
+}
+
+.mh-about-card__title {
+  position: relative;
+  z-index: 2;
+  margin: 8px 0 0;
+  max-width: 75%;
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 1.2;
+  color: #fff;
+}
+
+.mh-about-card__number {
+  position: relative;
+  z-index: 2;
+  margin: 12px 0 0;
+  font-size: 44px;
+  font-weight: 900;
+  line-height: 1;
+  color: #fff;
+}
+
+.mh-about-card__desc {
+  position: relative;
+  z-index: 2;
+  margin: 8px 0 0;
+  max-width: 65%;
+  font-size: 13px;
+  line-height: 1.45;
+  color: #fff;
+}
+
+.mh-about-card--approach .mh-about-card__pixel {
+  position: absolute;
+  right: 2%;
+  bottom: 0;
+  z-index: 1;
+  width: 46%;
+  height: auto;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+.mh-about-card--tools .mh-about-card__tools {
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  z-index: 1;
+  width: 88%;
+  max-width: 320px;
+  height: auto;
+  transform: translateX(-50%);
+  object-fit: contain;
+  pointer-events: none;
+}
+
+.mh-about-card--experience .mh-about-card__map {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  width: 78%;
+  height: auto;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+.mh-about-card--funfact .mh-about-card__label {
+  color: #c46a4f;
+}
+
+.mh-about-card--funfact .mh-about-card__title {
+  color: #fbf3e7;
+  max-width: 90%;
+}
+
+.mh-about-card--funfact .mh-about-card__mascot {
+  position: absolute;
+  right: 4%;
+  bottom: 0;
+  z-index: 1;
+  width: 58%;
+  height: auto;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+.mh-about-card__stars {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.mh-about-card__star--big {
+  color: #f6d98a;
+}
+
+.mh-about-card__star--small {
+  color: #e8a493;
+}
+
+.mh-about-cards__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  width: 100%;
+  background: var(--color-burgundy-dark);
+  box-shadow: 0 10px 30px rgba(92, 15, 28, 0.1);
+  border-radius: 999px;
+  padding: 12px 24px;
+}
+
+.mh-about-cards__footer-info {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.mh-about-cards__footer-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.mh-about-cards__footer-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 999px;
+  background: #3fae6b;
+  flex-shrink: 0;
+}
+
+.mh-about-cards__footer-medium {
+  font-weight: 500;
+}
+
+.mh-about-cards__socials {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.mh-about-cards__social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 999px;
+  border: 0.5px solid rgba(246, 236, 224, 0.5);
+  background: transparent;
+  color: #fff;
+  text-decoration: none;
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.mh-about-cards__social:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+@media (max-width: 1100px) {
+  .mh-about-cards__row {
+    padding: 0;
+  }
+
+  .mh-about-card {
+    flex: 1 1 45%;
+  }
+}
+
+@media (max-width: 720px) {
+  .mh-about-card {
+    flex: 1 1 100%;
+    height: 220px;
+  }
+
+  .mh-about-cards__footer {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .mh-about-cards__footer-info {
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .mh-about-cards {
+    border-radius: 0 0 32px 32px;
+  }
+}

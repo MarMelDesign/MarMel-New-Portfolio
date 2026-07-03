@@ -1,0 +1,143 @@
+.mh-about-hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  min-height: 460px;
+  background: var(--color-burgundy);
+  border-radius: 44px 44px 0 0;
+  padding: clamp(28px, 4vw, 40px) clamp(20px, 3.2vw, 32px);
+  gap: 24px;
+}
+
+.mh-about-hero__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1 1 320px;
+  max-width: 360px;
+  padding-left: 16px;
+  gap: 24px;
+}
+
+.mh-about-hero__eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2.16px;
+  text-transform: uppercase;
+  color: #e8a493;
+}
+
+.mh-about-hero__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--color-coral);
+  flex-shrink: 0;
+}
+
+.mh-about-hero__headline {
+  margin: 0;
+  font-family: var(--font-body);
+  font-weight: 900;
+  font-size: clamp(34px, 4vw, 52px);
+  line-height: 1.05;
+  letter-spacing: -1.3px;
+  color: #fff;
+}
+
+.mh-about-hero__paragraph {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #e5cfc0;
+}
+
+.mh-about-hero__buttons {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+.mh-about-hero__visual {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: flex-end;
+  flex: 1 1 280px;
+  min-height: 400px;
+  align-self: stretch;
+}
+
+.mh-about-hero__mascot {
+  width: auto;
+  height: clamp(320px, 38vw, 449px);
+  aspect-ratio: 768 / 898;
+  object-fit: cover;
+  border-radius: 28px;
+  box-shadow: 0 20px 44px rgba(0, 0, 0, 0.28);
+}
+
+@media (max-width: 1100px) {
+  .mh-about-hero {
+    justify-content: center;
+    padding: clamp(28px, 4vw, 40px) 24px;
+  }
+
+  .mh-about-hero__text {
+    flex: 1 1 100%;
+    max-width: 100%;
+    align-items: center;
+    text-align: center;
+    padding-left: 0;
+  }
+
+  .mh-about-hero__eyebrow {
+    justify-content: center;
+  }
+
+  .mh-about-hero__buttons {
+    justify-content: center;
+  }
+
+  .mh-about-hero__visual {
+    order: 2;
+    flex: 1 1 260px;
+    min-height: 340px;
+  }
+
+  .mh-capability-card {
+    order: 3;
+    flex: 1 1 100%;
+    max-width: 480px;
+  }
+}
+
+@media (max-width: 640px) {
+  .mh-about-hero {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    min-height: 0;
+    border-radius: 32px 32px 0 0;
+  }
+
+  .mh-about-hero__text,
+  .mh-about-hero__visual,
+  .mh-capability-card {
+    flex: 0 1 auto;
+    width: 100%;
+  }
+
+  .mh-about-hero__visual {
+    min-height: 0;
+  }
+
+  .mh-about-hero__mascot {
+    height: clamp(260px, 62vw, 360px);
+  }
+}

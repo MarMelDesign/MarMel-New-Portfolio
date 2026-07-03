@@ -1,0 +1,34 @@
+.mh-hero-text {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  width: 100%;
+  max-width: 340px;
+}
+
+.mh-hero-text__paragraph {
+  margin: 0;
+  font-size: 19px;
+  font-weight: 500;
+  line-height: 1.55;
+  color: var(--color-cream-soft);
+}
+
+.mh-hero-text__ctas {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+@media (max-width: 768px) {
+  .mh-hero-text {
+    max-width: 100%;
+    text-align: center;
+    align-items: center;
+  }
+
+  .mh-hero-text__ctas {
+    justify-content: center;
+  }
+}

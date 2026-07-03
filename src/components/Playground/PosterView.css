@@ -1,0 +1,70 @@
+.mh-poster-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(20, 4, 8, 0.78);
+  backdrop-filter: blur(6px);
+}
+
+.mh-poster-overlay__spotlight {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 42%, rgba(251, 243, 231, 0.16), rgba(0, 0, 0, 0) 55%);
+  pointer-events: none;
+}
+
+.mh-poster-shell {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  max-width: 640px;
+  width: 100%;
+}
+
+.mh-poster-shell__close {
+  position: absolute;
+  top: -16px;
+  right: -16px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  border: none;
+  background: #fff;
+  color: var(--color-burgundy);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.mh-poster-shell__close:focus-visible {
+  outline: 2px solid #fbf3e7;
+  outline-offset: 2px;
+}
+
+.mh-poster-shell__cta {
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.28);
+}
+
+.mh-poster-shell__cta:hover {
+  transform: translateY(-2px);
+}
+
+.mh-poster-shell__cta:focus-visible {
+  outline: 2px solid #fbf3e7;
+  outline-offset: 2px;
+}
+
+@media (max-width: 640px) {
+  .mh-poster-shell__close {
+    top: 4px;
+    right: 4px;
+  }
+}

@@ -1,0 +1,194 @@
+.mh-header {
+  position: relative;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 84px;
+  padding: 0 clamp(20px, 4vw, 48px);
+  gap: 16px;
+}
+
+.mh-header__nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  flex: 1;
+}
+
+.mh-nav-link {
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--color-muted);
+  text-transform: lowercase;
+  transition: color 0.2s ease;
+}
+
+.mh-nav-link:hover {
+  color: var(--color-black);
+}
+
+.mh-nav-link[aria-current='page'] {
+  color: var(--color-black);
+  font-weight: 600;
+}
+
+/* Sits mostly in the white page background above the hero (header height
+   is 84px; top: 12px leaves the notch's bottom edge at 104px, only ~20px
+   past the hero's top edge). Just the rounded-bottom tip dips into the
+   burgundy as a shallow cutout — it must stay clear of the DESIGNER
+   typography and the mascot below it. */
+.mh-header__logo-tab {
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 31;
+  width: 200px;
+  height: 92px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-radius: 0 0 34px 34px;
+  box-shadow: 0 2px 6px rgba(92, 15, 28, 0.05);
+}
+
+.mh-header__logo-img {
+  width: 110px;
+  height: auto;
+}
+
+.mh-header__actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.mh-header__mute {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  border: none;
+  border-radius: 999px;
+  background: var(--color-cream-soft);
+  color: var(--color-burgundy);
+}
+
+.mh-header__mute:hover {
+  background: #f1e4d8;
+}
+
+.mh-header__menu-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  border: none;
+  background: var(--color-cream-soft);
+  color: var(--color-burgundy);
+  margin-left: auto;
+}
+
+.mh-header__mobile-menu {
+  position: absolute;
+  top: 100%;
+  left: 16px;
+  right: 16px;
+  z-index: 40;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 16px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(92, 15, 28, 0.18);
+}
+
+.mh-header__mobile-link {
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 10px 8px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-black);
+  text-transform: lowercase;
+  border-radius: 10px;
+}
+
+.mh-header__mobile-link:hover {
+  background: var(--color-cream-soft);
+}
+
+.mh-header__mobile-link[aria-current='page'] {
+  background: var(--color-cream-soft);
+}
+
+.mh-header__mobile-talk {
+  margin-top: 10px;
+  justify-content: center;
+}
+
+.mh-header__mobile-mute {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 4px;
+  padding: 10px 8px;
+  border: none;
+  border-radius: 10px;
+  background: var(--color-cream-soft);
+  color: var(--color-burgundy);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* the 5-item nav + centered logo tab + talk button no longer fit in one row
+   below this width, so switch to the mobile menu earlier than the hero's
+   own 768px stacking breakpoint */
+@media (max-width: 1024px) {
+  .mh-header {
+    height: 72px;
+  }
+
+  .mh-header__nav {
+    display: none;
+  }
+
+  .mh-header__actions {
+    display: none;
+  }
+
+  .mh-header__logo-tab {
+    position: static;
+    transform: none;
+    margin-right: auto;
+    width: auto;
+    height: auto;
+    padding: 8px 0;
+    box-shadow: none;
+    background: transparent;
+  }
+
+  .mh-header__logo-img {
+    width: 90px;
+    height: auto;
+  }
+
+  .mh-header__menu-toggle {
+    display: flex;
+  }
+}

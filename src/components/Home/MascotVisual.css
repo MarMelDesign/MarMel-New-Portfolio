@@ -1,0 +1,73 @@
+.mh-mascot-stage {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.mh-mascot-stage__word {
+  position: absolute;
+  left: 5%;
+  top: 4.5%;
+  z-index: 1;
+  font-family: var(--font-display);
+  font-size: clamp(48px, 15vw, 220px);
+  line-height: 1;
+  color: #fff;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+/* independent image layer: sized by height so the full character (hair,
+   headphones, legs, shoes) always fits inside the hero without cropping.
+   Centered via auto-margins (not `left: 50%; transform: translateX(-50%)`)
+   because Motion writes its own inline `transform` for the scale-in
+   animation, which would otherwise silently override a CSS transform. */
+.mh-mascot-stage__image {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+  z-index: 2;
+  height: 88%;
+  width: 92%;
+  object-fit: contain;
+  object-position: bottom center;
+}
+
+@media (max-width: 1024px) {
+  .mh-mascot-stage__word {
+    font-size: clamp(32px, 11vw, 120px);
+  }
+}
+
+@media (max-width: 768px) {
+  .mh-mascot-stage {
+    position: relative;
+    inset: auto;
+    order: 3;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+  }
+
+  .mh-mascot-stage__word {
+    font-size: clamp(40px, 14vw, 90px);
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .mh-mascot-stage__image {
+    position: relative;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    margin: 0;
+    height: auto;
+    width: clamp(220px, 60vw, 340px);
+  }
+}

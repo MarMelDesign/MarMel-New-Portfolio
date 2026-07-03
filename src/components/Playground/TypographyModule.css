@@ -1,0 +1,42 @@
+.mh-typography-module__list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.mh-type-tile {
+  width: 100%;
+  align-items: center;
+  padding: 10px 12px;
+  gap: 12px;
+}
+
+.mh-type-tile.mh-tile--selected {
+  box-shadow: 0 0 0 2px var(--color-burgundy);
+}
+
+.mh-type-tile__glyph {
+  width: 38px;
+  flex-shrink: 0;
+  font-size: 26px;
+  line-height: 1;
+  color: var(--color-black);
+  text-align: left;
+}
+
+.mh-type-tile__meta {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.mh-type-tile__name {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--color-black);
+}
+
+.mh-type-tile__note {
+  font-size: 10px;
+  color: #8a7566;
+}

@@ -1,0 +1,60 @@
+.mh-toolbox {
+  display: flex;
+  flex: 1;
+  min-width: 0;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 16px;
+}
+
+.mh-toolbox__header {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 0 4px 4px;
+  width: 100%;
+}
+
+.mh-toolbox > .mh-panel {
+  flex: 1 1 calc(50% - 8px);
+  min-width: 0;
+}
+
+.mh-toolbox > .mh-panel:last-of-type {
+  flex-basis: 100%;
+}
+
+.mh-toolbox__eyebrow {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #e8a493;
+}
+
+.mh-toolbox__heading {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 900;
+  line-height: 1.2;
+  color: #fbf3e7;
+}
+
+.mh-toolbox__sub {
+  margin: 2px 0 0;
+  font-size: 12px;
+  line-height: 1.4;
+  color: #e3cfc2;
+}
+
+@media (max-width: 1100px) {
+  .mh-toolbox {
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .mh-toolbox > .mh-panel {
+    flex-basis: 100%;
+  }
+}

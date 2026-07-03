@@ -1,0 +1,260 @@
+.mh-board {
+  position: relative;
+  display: flex;
+  width: 440px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  box-shadow: 0 34px 70px rgba(74, 11, 22, 0.4);
+  border-radius: 28px;
+  padding: 48px;
+  overflow: hidden;
+}
+
+.mh-board__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mh-board__wash {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(90deg, rgba(92, 15, 28, 0.08) 0%, rgba(0, 0, 0, 0) 100%);
+  pointer-events: none;
+}
+
+.mh-board__pin {
+  position: absolute;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  border-radius: 999px;
+  box-shadow: 0 3px 5px rgba(74, 11, 22, 0.4);
+}
+
+.mh-board__pin--top-left {
+  left: 16px;
+  top: 16px;
+}
+
+.mh-board__pin--top-right {
+  right: 16px;
+  top: 16px;
+}
+
+.mh-board__pin--bottom-left {
+  left: 16px;
+  bottom: 16px;
+}
+
+.mh-board__pin--bottom-right {
+  right: 16px;
+  bottom: 16px;
+}
+
+.mh-board__pin-shine {
+  width: 5px;
+  height: 5px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.mh-board__confetti {
+  position: absolute;
+  z-index: 2;
+  border-radius: 999px;
+}
+
+.mh-board__confetti--one {
+  left: 32px;
+  top: 32px;
+  width: 12px;
+  height: 12px;
+  background: #e86a5c;
+}
+
+.mh-board__confetti--two {
+  right: 40px;
+  top: 48px;
+  width: 10px;
+  height: 10px;
+  background: #f2c14e;
+}
+
+.mh-board__confetti--three {
+  left: 56px;
+  bottom: 48px;
+  width: 8px;
+  height: 8px;
+  background: #8258c8;
+}
+
+.mh-board__confetti--four {
+  right: 56px;
+  bottom: 40px;
+  width: 10px;
+  height: 10px;
+  background: #4a9d6a;
+}
+
+.mh-board__card {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: fit-content;
+  max-width: 380px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+  padding: 24px;
+  gap: 12px;
+  text-align: center;
+  box-shadow: 0 20px 44px rgba(0, 0, 0, 0.16);
+}
+
+.mh-board__eyebrow {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--color-black);
+}
+
+.mh-board__editable {
+  cursor: text;
+  border-radius: 6px;
+  outline: none;
+  transition:
+    background-color 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.mh-board__editable:hover {
+  background: rgba(92, 15, 28, 0.08);
+}
+
+.mh-board__editable:focus {
+  background: rgba(92, 15, 28, 0.1);
+  box-shadow: 0 0 0 2px rgba(92, 15, 28, 0.3);
+}
+
+.mh-board__logo-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 20px;
+  box-shadow: 0 12px 28px rgba(92, 15, 28, 0.28);
+}
+
+.mh-board__logo-icon {
+  color: #fbf3e7;
+}
+
+.mh-board__title-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mh-board__title {
+  margin: 0;
+  font-size: clamp(28px, 4vw, 40px);
+  line-height: 1;
+  letter-spacing: -1.5px;
+  color: var(--color-black);
+}
+
+.mh-board__title--pill,
+.mh-board__title--ring {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mh-board__title-pill {
+  display: inline-flex;
+  padding: 8px 24px;
+  border-radius: 999px;
+  color: #fff;
+}
+
+.mh-board__title-ring-underline {
+  margin-top: 8px;
+  width: 64px;
+  height: 4px;
+  border-radius: 999px;
+}
+
+.mh-board__description {
+  max-width: 320px;
+}
+
+.mh-board__description p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--color-black);
+  white-space: pre-line;
+}
+
+.mh-board__selected {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 4px;
+}
+
+.mh-board__selected-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  box-shadow: 0 8px 18px rgba(74, 11, 22, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.mh-board__selected-caption {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.mh-board__selected-caption-title {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--color-black);
+}
+
+.mh-board__selected-caption-sub {
+  font-size: 11px;
+  color: #8a7566;
+}
+
+@media (max-width: 1100px) {
+  .mh-board {
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .mh-board {
+    padding: 32px 20px;
+  }
+
+  .mh-board__card {
+    padding: 20px;
+    gap: 10px;
+  }
+}

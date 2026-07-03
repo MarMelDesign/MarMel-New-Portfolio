@@ -1,0 +1,83 @@
+.mh-logo-module__grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.mh-logo-tile {
+  width: 96px;
+  height: 58px;
+  align-items: center;
+  justify-content: center;
+}
+
+.mh-logo-preview__badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: var(--color-burgundy);
+}
+
+.mh-logo-preview__badge-letter {
+  font-size: 18px;
+  font-weight: 900;
+  color: #fbf3e7;
+}
+
+.mh-logo-preview__minimal {
+  font-size: 24px;
+  font-weight: 300;
+  letter-spacing: -0.6px;
+  color: var(--color-black);
+  text-transform: lowercase;
+}
+
+.mh-logo-preview__wordmark {
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: -0.325px;
+  color: var(--color-black);
+  text-transform: lowercase;
+}
+
+.mh-logo-preview__italic {
+  font-size: 24px;
+  font-weight: 700;
+  font-style: italic;
+  color: var(--color-burgundy);
+}
+
+.mh-logo-preview__pill {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 28px;
+  padding: 0 16px;
+  border-radius: 999px;
+  background: var(--color-coral);
+}
+
+.mh-logo-preview__pill-text {
+  font-size: 13px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.mh-logo-preview__monogram {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  border: 2px solid var(--color-burgundy);
+}
+
+.mh-logo-preview__monogram-text {
+  font-size: 12px;
+  font-weight: 900;
+  color: var(--color-burgundy);
+}

@@ -1,0 +1,37 @@
+.mh-tile {
+  position: relative;
+  display: flex;
+  border: none;
+  background: #f6ece0;
+  box-shadow: 0 0 0 1px #e4d8c4;
+  border-radius: 14px;
+  cursor: pointer;
+  transition:
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.mh-tile:hover {
+  box-shadow:
+    0 0 0 1px #e4d8c4,
+    0 10px 20px rgba(74, 11, 22, 0.14);
+}
+
+.mh-tile:focus-visible {
+  outline: 2px solid var(--color-burgundy);
+  outline-offset: 2px;
+}
+
+.mh-tile--selected {
+  background: #fff;
+  box-shadow:
+    0 0 0 2px #fff,
+    0 0 0 4px var(--color-burgundy);
+}
+
+.mh-tile--selected:hover {
+  box-shadow:
+    0 0 0 2px #fff,
+    0 0 0 4px var(--color-burgundy),
+    0 10px 20px rgba(74, 11, 22, 0.18);
+}

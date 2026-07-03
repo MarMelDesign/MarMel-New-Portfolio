@@ -1,0 +1,70 @@
+import { useState } from 'react'
+import { AnimatePresence, motion, useReducedMotion } from 'motion/react'
+import Header from './components/Home/Header'
+import Home from './components/Home/Home'
+import Work from './components/Work/Work'
+import About from './components/About/About'
+import Playground from './components/Playground/Playground'
+import MarmelSpace from './components/MarmelSpace/MarmelSpace'
+import Merch from './components/Merch/Merch'
+import Resume from './components/Resume/Resume'
+import { MusicProvider } from './components/Music/MusicProvider'
+import './App.css'
+
+const pageVariants = {
+  initial: { opacity: 0, y: 24, scale: 0.98 },
+  animate: { opacity: 1, y: 0, scale: 1 },
+  exit: { opacity: 0, y: -16, scale: 0.98 },
+}
+
+const reducedVariants = {
+  initial: { opacity: 0 },
+  animate: { opacity: 1 },
+  exit: { opacity: 0 },
+}
+
+const pageTransition = { duration: 0.7, ease: [0.22, 1, 0.36, 1] }
+
+function App() {
+  const [page, setPage] = useState('home')
+  const prefersReducedMotion = useReducedMotion()
+  const variants = prefersReducedMotion ? reducedVariants : pageVariants
+
+  return (
+    <MusicProvider>
+      <div className={page === 'resume' ? 'mh-app mh-app--resume' : 'mh-app'}>
+        <Header activePage={page} onNavigate={setPage} />
+
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={page}
+            className="mh-page"
+            variants={variants}
+            initial="initial"
+            animate="animate"
+            exit="exit"
+            transition={pageTransition}
+          >
+            {page === 'work' ? (
+              <Work />
+            ) : page === 'about' ? (
+              <About onNavigate={setPage} />
+            ) : page === 'playground' ? (
+              <Playground onNavigate={setPage} />
+            ) : page === 'marmel-space' ? (
+              <MarmelSpace onNavigate={setPage} />
+            ) : page === 'merch' ? (
+              <Merch onNavigate={setPage} />
+            ) : page === 'resume' ? (
+              <Resume onNavigate={setPage} />
+            ) : (
+              <Home onNavigate={setPage} />
+            )}
+          </motion.div>
+        </AnimatePresence>
+      </div>
+    </MusicProvider>
+  )
+}
+
+export default App

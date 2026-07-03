@@ -1,0 +1,426 @@
+.mh-resume-wrap {
+  padding-top: clamp(24px, 3vh, 40px);
+}
+
+.mh-resume {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 24px;
+}
+
+.mh-resume__back {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  gap: 8px;
+  border: none;
+  background: none;
+  padding: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-burgundy);
+}
+
+.mh-resume__back:hover {
+  opacity: 0.72;
+}
+
+.mh-resume__hero {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.mh-resume__role-label {
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: var(--color-muted);
+}
+
+.mh-resume__name {
+  margin: 0;
+  font-size: clamp(34px, 5vw, 64px);
+  font-weight: 900;
+  line-height: 1.02;
+  letter-spacing: -1.8px;
+  color: var(--color-burgundy);
+}
+
+.mh-resume__nickname {
+  margin-top: -4px;
+  font-size: 26px;
+  font-weight: 900;
+  line-height: 1;
+  color: var(--color-coral);
+}
+
+.mh-resume__dashboard {
+  display: flex;
+  align-items: flex-start;
+  background: var(--color-burgundy);
+  border-radius: 44px;
+  padding: 32px;
+  gap: 32px;
+}
+
+.mh-resume__index {
+  display: flex;
+  width: 196px;
+  flex-shrink: 0;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.mh-resume__index-heading {
+  margin-bottom: 8px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #e8a493;
+}
+
+.mh-resume__index-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.mh-resume__index-item {
+  display: flex;
+  align-items: center;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: none;
+  padding: 12px 0;
+  gap: 12px;
+  text-align: left;
+}
+
+.mh-resume__index-item:hover .mh-resume__index-label {
+  color: #fff;
+}
+
+.mh-resume__index-number {
+  width: 24px;
+  font-size: 13px;
+  font-weight: 900;
+  color: var(--color-coral);
+}
+
+.mh-resume__index-label {
+  font-size: 15px;
+  font-weight: 500;
+  color: #f3e4d6;
+  text-transform: lowercase;
+  transition: color 0.15s ease;
+}
+
+.mh-resume__download {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 16px;
+  border: none;
+  background: #fbf3e7;
+  border-radius: 999px;
+  padding: 12px 16px;
+  gap: 8px;
+  color: var(--color-burgundy);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.mh-resume__download:hover {
+  background: #fff;
+}
+
+.mh-resume__main {
+  display: flex;
+  flex: 1;
+  min-width: 0;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.mh-resume-card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  box-shadow: 0 18px 44px rgba(92, 15, 28, 0.16);
+  border-radius: 28px;
+  padding: 28px;
+  gap: 16px;
+}
+
+.mh-resume-card__head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.mh-resume-card__number {
+  font-size: 13px;
+  font-weight: 900;
+  color: var(--color-coral);
+}
+
+.mh-resume-card__title {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 900;
+  color: var(--color-burgundy);
+  text-transform: lowercase;
+}
+
+.mh-resume-card__divider {
+  flex: 1;
+  height: 1px;
+  background: rgba(92, 15, 28, 0.1);
+}
+
+.mh-resume-card__text {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--color-muted);
+}
+
+.mh-resume-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.mh-resume-job {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  box-shadow: 0 8px 22px rgba(92, 15, 28, 0.08);
+  border: 0.5px solid #eaded0;
+  border-radius: 20px;
+  padding: 20px;
+  gap: 12px;
+}
+
+.mh-resume-job__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.mh-resume-job__title-block {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.mh-resume-job__company {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-burgundy);
+}
+
+.mh-resume-job__role {
+  font-size: 13px;
+  color: var(--color-muted);
+}
+
+.mh-resume-job__dates {
+  max-width: 170px;
+  flex-shrink: 0;
+  font-size: 12px;
+  font-weight: 600;
+  color: #c56a4f;
+  text-align: right;
+}
+
+.mh-resume-job__achievements {
+  display: flex;
+  flex-direction: column;
+  margin-top: 4px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(92, 15, 28, 0.07);
+  gap: 8px;
+}
+
+.mh-resume-job__achievements-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  color: #c56a4f;
+}
+
+.mh-resume-job__achievement-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.mh-resume-job__achievement-dot {
+  width: 6px;
+  height: 6px;
+  flex-shrink: 0;
+  margin-top: 7px;
+  border-radius: 999px;
+  background: var(--color-coral);
+}
+
+.mh-resume-job__achievement-text {
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--color-muted);
+}
+
+.mh-resume-edu {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background: #fff;
+  box-shadow: 0 8px 22px rgba(92, 15, 28, 0.08);
+  border: 0.5px solid #eaded0;
+  border-radius: 18px;
+  padding: 20px;
+  gap: 16px;
+}
+
+.mh-resume-edu__text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.mh-resume-edu__institution {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-burgundy);
+}
+
+.mh-resume-edu__detail {
+  font-size: 13px;
+  color: var(--color-muted);
+}
+
+.mh-resume-edu__dates {
+  max-width: 160px;
+  flex-shrink: 0;
+  font-size: 12px;
+  font-weight: 600;
+  color: #c56a4f;
+  text-align: right;
+}
+
+.mh-resume-skills-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.mh-resume-skills-group__label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.6px;
+  color: #c56a4f;
+}
+
+.mh-resume-skills-group__chips {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.mh-resume-chip {
+  display: inline-flex;
+  align-items: center;
+  background: #fff;
+  border: 0.5px solid #eaded0;
+  border-radius: 999px;
+  padding: 6px 14px;
+}
+
+.mh-resume-chip__text {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--color-burgundy);
+}
+
+@media (max-width: 1200px) {
+  .mh-resume__dashboard {
+    flex-direction: column;
+  }
+
+  .mh-resume__index {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .mh-resume__index-heading {
+    margin-bottom: 0;
+  }
+
+  .mh-resume__index-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex: 1;
+    gap: 4px 20px;
+  }
+
+  .mh-resume__index-item {
+    border-bottom: none;
+    padding: 4px 0;
+  }
+
+  .mh-resume__download {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .mh-resume__dashboard {
+    padding: 20px;
+    border-radius: 32px;
+    gap: 24px;
+  }
+
+  .mh-resume-card {
+    padding: 20px;
+    border-radius: 22px;
+  }
+
+  .mh-resume-job__head,
+  .mh-resume-edu {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .mh-resume-job__dates,
+  .mh-resume-edu__dates {
+    max-width: 100%;
+    text-align: left;
+  }
+
+  .mh-resume__index {
+    gap: 12px;
+  }
+
+  .mh-resume__index-list {
+    gap: 4px 14px;
+  }
+}
+
+@media print {
+  .mh-app--resume .mh-header,
+  .mh-resume__back,
+  .mh-resume__index {
+    display: none !important;
+  }
+
+  .mh-resume-wrap {
+    padding-top: 0;
+  }
+}

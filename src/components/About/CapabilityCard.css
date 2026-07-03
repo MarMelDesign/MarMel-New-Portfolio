@@ -1,0 +1,50 @@
+.mh-capability-card {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  width: 320px;
+  max-width: 100%;
+  border-radius: 32px;
+  border: 1px solid rgba(243, 228, 214, 0.2);
+  box-shadow: 0 18px 40px rgba(92, 15, 28, 0.16);
+  padding: 24px;
+  gap: 16px;
+}
+
+.mh-capability-card__row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.mh-capability-card__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  background: #fff;
+  color: var(--color-burgundy);
+}
+
+.mh-capability-card__text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.mh-capability-card__title {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: normal;
+  color: #fbf3e7;
+}
+
+.mh-capability-card__desc {
+  font-size: 12px;
+  line-height: 1.4;
+  color: #c8a99c;
+}

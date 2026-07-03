@@ -1,0 +1,60 @@
+.mh-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 16px 10px 10px;
+  background: var(--color-burgundy-dark);
+  border-radius: 999px;
+  max-width: 100%;
+}
+
+.mh-badge__icons {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.mh-badge__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 999px;
+  border: 2px solid var(--color-burgundy-dark);
+}
+
+.mh-badge__icon--1 {
+  background: var(--color-coral);
+  color: var(--color-burgundy-dark);
+}
+
+.mh-badge__icon--2 {
+  margin-left: -10px;
+  background: var(--color-cream-soft);
+  color: var(--color-burgundy-dark);
+}
+
+.mh-badge__icon--3 {
+  margin-left: -10px;
+  background: var(--color-cream);
+  color: var(--color-burgundy);
+}
+
+.mh-badge__text {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-cream-soft);
+  white-space: nowrap;
+}
+
+@media (max-width: 480px) {
+  .mh-badge {
+    flex-wrap: wrap;
+    white-space: normal;
+  }
+
+  .mh-badge__text {
+    white-space: normal;
+  }
+}

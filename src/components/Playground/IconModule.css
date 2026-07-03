@@ -1,0 +1,27 @@
+.mh-icon-module__grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.mh-icon-tile {
+  width: 52px;
+  height: 52px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  color: var(--color-burgundy);
+}
+
+.mh-icon-tile.mh-tile--selected {
+  background: var(--color-burgundy);
+  color: #fbf3e7;
+  box-shadow:
+    0 0 0 2px #fff,
+    0 0 0 4px var(--color-burgundy),
+    0 8px 16px rgba(74, 11, 22, 0.28);
+}
+
+.mh-icon-tile__glyph {
+  pointer-events: none;
+}

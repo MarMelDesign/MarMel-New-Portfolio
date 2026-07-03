@@ -1,0 +1,59 @@
+.mh-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 999px;
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  line-height: normal;
+  text-transform: lowercase;
+}
+
+.mh-btn__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* primary: solid white pill, used for main CTAs on the burgundy hero */
+.mh-btn--primary {
+  background: #fff;
+  color: var(--color-burgundy);
+  padding: 13px 22px;
+}
+
+/* outline: transparent pill with soft cream border, secondary CTA */
+.mh-btn--outline {
+  background: transparent;
+  color: var(--color-cream);
+  border: 1px solid rgba(243, 228, 214, 0.4);
+  padding: 13px 22px;
+}
+
+/* talk: header pill with a filled circular icon bubble */
+.mh-btn--talk {
+  background: #fff;
+  color: var(--color-black);
+  padding: 8px 8px 8px 22px;
+  box-shadow: 0 6px 18px rgba(92, 15, 28, 0.14);
+}
+
+.mh-btn--talk .mh-btn__icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  background: var(--color-burgundy);
+  color: var(--color-cream);
+}
+
+@media (max-width: 480px) {
+  .mh-btn--primary,
+  .mh-btn--outline {
+    padding: 12px 18px;
+    font-size: 14px;
+  }
+}

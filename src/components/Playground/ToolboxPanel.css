@@ -1,0 +1,37 @@
+.mh-panel {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  background: #fff;
+  box-shadow: 0 14px 30px rgba(74, 11, 22, 0.22);
+  border-radius: 22px;
+  padding: 16px;
+  gap: 12px;
+}
+
+.mh-panel__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mh-panel__title {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--color-black);
+  letter-spacing: 0.3px;
+  text-transform: lowercase;
+}
+
+.mh-panel__number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 999px;
+  background: #f6ece0;
+  color: #c56a4f;
+  font-size: 11px;
+  font-weight: 700;
+}

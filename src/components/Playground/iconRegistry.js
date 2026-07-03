@@ -1,0 +1,33 @@
+import {
+  BoltIcon,
+  CircleIcon,
+  LeafIcon,
+  StarIcon,
+  BoxIcon,
+  FlowerIcon,
+  WaveIcon,
+  OrbitIcon,
+  CubeIcon,
+  FlagIcon,
+  GridIcon,
+  MapPinIcon,
+  HeartIcon,
+  LayoutIcon,
+} from '../Home/Icons'
+
+export const ICON_COMPONENTS = {
+  spark: BoltIcon,
+  circle: CircleIcon,
+  leaf: LeafIcon,
+  star: StarIcon,
+  box: BoxIcon,
+  flower: FlowerIcon,
+  wave: WaveIcon,
+  orbit: OrbitIcon,
+  cube: CubeIcon,
+  flag: FlagIcon,
+  grid: GridIcon,
+  pin: MapPinIcon,
+  heart: HeartIcon,
+  layout: LayoutIcon,
+}

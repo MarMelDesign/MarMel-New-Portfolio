@@ -1,0 +1,51 @@
+:root {
+  --color-burgundy: #5c0f1c;
+  --color-burgundy-dark: #4a0b16;
+  --color-cream: #ffffff;
+  --color-cream-soft: #ffffff;
+  --color-offwhite: #ffffff;
+  --color-black: #181818;
+  --color-muted: #6b5d52;
+  --color-coral: #e86a5c;
+  --color-blush: #e8b3ab;
+
+  --font-body: 'Inter', system-ui, 'Segoe UI', sans-serif;
+  --font-display: 'Gasoek One', 'Inter', system-ui, sans-serif;
+
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+body {
+  background: var(--color-offwhite);
+  font-family: var(--font-body);
+  color: var(--color-black);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100%;
+  min-height: 100svh;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}

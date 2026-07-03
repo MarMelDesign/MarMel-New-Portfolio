@@ -1,0 +1,34 @@
+.mh-mascot-module__grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.mh-mascot-tile {
+  width: 98px;
+  flex-direction: column;
+  align-items: center;
+  padding: 8px;
+  gap: 4px;
+}
+
+.mh-mascot-tile.mh-tile--selected {
+  box-shadow: 0 0 0 2px var(--color-burgundy);
+}
+
+.mh-mascot-tile__thumb {
+  display: block;
+  width: 100%;
+  height: 64px;
+  border-radius: 10px;
+  background-color: #f6ece0;
+  background-repeat: no-repeat;
+}
+
+.mh-mascot-tile__label {
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--color-black);
+  text-align: center;
+}
