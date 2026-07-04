@@ -18,9 +18,6 @@ export default function SlideShell({
   return (
     <section className="mh-case-slide" aria-label={`${name}, slide ${index} of ${total}`}>
       <div className={frameClass}>
-        <span className="mh-case-slide__glow mh-case-slide__glow--one" aria-hidden="true" />
-        <span className="mh-case-slide__glow mh-case-slide__glow--two" aria-hidden="true" />
-
         <div className="mh-case-slide__header">
           <div className="mh-case-slide__kicker">
             <span className="mh-case-slide__kicker-dot" aria-hidden="true" />

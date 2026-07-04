@@ -40,9 +40,14 @@ export default function Header({ activePage = 'home', onNavigate }) {
         ))}
       </nav>
 
-      <div className="mh-header__logo-tab">
+      <button
+        type="button"
+        className="mh-header__logo-tab"
+        onClick={() => navigate('home')}
+        aria-label="Go to home"
+      >
         <img src={logoWordmark} alt="Marmel" className="mh-header__logo-img" />
-      </div>
+      </button>
 
       <div className="mh-header__actions">
         {showMuteToggle && (
