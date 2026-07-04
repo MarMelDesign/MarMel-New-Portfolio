@@ -16,6 +16,7 @@ import DeSoiCase from './components/CaseStudy/DeSoiCase'
 import VaultwinCase from './components/CaseStudy/VaultwinCase'
 import DeadliComingSoon from './components/CaseStudy/DeadliComingSoon'
 import LoadingScreen from './components/Loading/LoadingScreen'
+import Footer from './components/Footer/Footer'
 import { MusicProvider } from './components/Music/MusicProvider'
 import './App.css'
 
@@ -102,6 +103,8 @@ function App() {
             )}
           </motion.div>
         </AnimatePresence>
+
+        {!CASE_STUDY_PAGES.includes(page) && <Footer />}
       </div>
     </MusicProvider>
   )
