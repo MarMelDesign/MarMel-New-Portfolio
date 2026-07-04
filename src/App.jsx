@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Analytics } from '@vercel/analytics/react'
 import { AnimatePresence, motion, useReducedMotion } from 'motion/react'
 import Header from './components/Home/Header'
 import Home from './components/Home/Home'
@@ -32,6 +33,7 @@ function App() {
 
   return (
     <MusicProvider>
+      <Analytics />
       <div className={page === 'resume' ? 'mh-app mh-app--resume' : 'mh-app'}>
         <Header activePage={page} onNavigate={setPage} />
 
