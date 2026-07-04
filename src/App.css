@@ -12,3 +12,8 @@
   min-height: 0;
   width: 100%;
 }
+
+.mh-app--case {
+  height: 100svh;
+  overflow: hidden;
+}

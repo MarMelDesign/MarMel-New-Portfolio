@@ -16,6 +16,7 @@ const projects = [
     image: cardDeadli,
     imageAlt: 'Deadli mobile app screens showing a countdown timer',
     background: 'linear-gradient(135deg, #f5dada 0%, #f3d2b6 100%)',
+    caseStudyPage: 'deadli-case',
     vars: {
       '--pc-title': '#181818',
       '--pc-desc': '#7a5c4c',
@@ -31,6 +32,7 @@ const projects = [
     image: cardIcrush,
     imageAlt: 'iCrush laptop mockup showing a purple social interface',
     background: 'linear-gradient(135deg, #241016 0%, #4a0b16 100%)',
+    caseStudyPage: 'icrush-case',
     vars: {
       '--pc-title': '#fbf3e7',
       '--pc-desc': '#d8b9b0',
@@ -46,6 +48,7 @@ const projects = [
     image: cardDesoi,
     imageAlt: 'De Soi product bottles with two people on a warm background',
     background: 'linear-gradient(135deg, #d68b00 0%, #de8e0d 100%)',
+    caseStudyPage: 'desoi-case',
     vars: {
       '--pc-title': '#ffffff',
       '--pc-desc': '#ffffff',
@@ -57,10 +60,11 @@ const projects = [
   {
     number: '04',
     title: 'Sproot',
-    description: 'A real-time portfolio monitoring dashboard for tracking assets with clarity.',
+    description: 'A media intelligence platform that turns scattered mentions into clear signals.',
     image: cardSproot,
-    imageAlt: 'Sproot mobile app showing an asset monitoring and analytics dashboard',
+    imageAlt: 'Sproot dashboard showing media monitoring and analytics screens',
     background: 'linear-gradient(135deg, #101a33 0%, #22407a 100%)',
+    caseStudyPage: 'sproot-case',
     vars: {
       '--pc-title': '#ffffff',
       '--pc-desc': '#b9c6e6',
@@ -72,10 +76,11 @@ const projects = [
   {
     number: '05',
     title: 'Vaultwin',
-    description: 'A gamified staking platform where players join prize pools and chase payouts.',
+    description: 'A non-loss lottery on the blockchain — entries are always returned to the player.',
     image: cardVaultwin,
     imageAlt: 'Vaultwin app cards showing crypto deposit pools and prize tallies',
     background: 'linear-gradient(135deg, #2a0e4d 0%, #7c1a6b 100%)',
+    caseStudyPage: 'vaultwin-case',
     vars: {
       '--pc-title': '#ffffff',
       '--pc-desc': '#e3c9f0',
@@ -91,6 +96,7 @@ const projects = [
     image: cardSarang,
     imageAlt: 'Sarang app screens showing Korean food delivery and ordering',
     background: 'linear-gradient(135deg, #7a0f1c 0%, #e5484d 100%)',
+    caseStudyPage: 'sarang-case',
     vars: {
       '--pc-title': '#ffffff',
       '--pc-desc': '#f9d3d3',
@@ -101,7 +107,7 @@ const projects = [
   },
 ]
 
-export default function WorkProjects() {
+export default function WorkProjects({ onNavigate }) {
   const prefersReducedMotion = useReducedMotion()
 
   return (
@@ -116,7 +122,10 @@ export default function WorkProjects() {
             viewport={{ once: true, amount: 0.4 }}
             transition={{ duration: 0.5, ease: 'easeOut', delay: index * 0.08 }}
           >
-            <ProjectCard {...project} />
+            <ProjectCard
+              {...project}
+              onViewCase={project.caseStudyPage ? () => onNavigate?.(project.caseStudyPage) : undefined}
+            />
           </motion.div>
         ))}
       </div>

@@ -9,8 +9,24 @@ import Playground from './components/Playground/Playground'
 import MarmelSpace from './components/MarmelSpace/MarmelSpace'
 import Merch from './components/Merch/Merch'
 import Resume from './components/Resume/Resume'
+import IcrushCase from './components/CaseStudy/IcrushCase'
+import SprootCase from './components/CaseStudy/SprootCase'
+import SarangCase from './components/CaseStudy/SarangCase'
+import DeSoiCase from './components/CaseStudy/DeSoiCase'
+import VaultwinCase from './components/CaseStudy/VaultwinCase'
+import DeadliComingSoon from './components/CaseStudy/DeadliComingSoon'
+import LoadingScreen from './components/Loading/LoadingScreen'
 import { MusicProvider } from './components/Music/MusicProvider'
 import './App.css'
+
+const CASE_STUDY_PAGES = [
+  'icrush-case',
+  'sproot-case',
+  'sarang-case',
+  'desoi-case',
+  'vaultwin-case',
+  'deadli-case',
+]
 
 const pageVariants = {
   initial: { opacity: 0, y: 24, scale: 0.98 },
@@ -28,13 +44,23 @@ const pageTransition = { duration: 0.7, ease: [0.22, 1, 0.36, 1] }
 
 function App() {
   const [page, setPage] = useState('home')
+  const [loading, setLoading] = useState(true)
   const prefersReducedMotion = useReducedMotion()
   const variants = prefersReducedMotion ? reducedVariants : pageVariants
 
   return (
     <MusicProvider>
       <Analytics />
-      <div className={page === 'resume' ? 'mh-app mh-app--resume' : 'mh-app'}>
+      {loading && <LoadingScreen onComplete={() => setLoading(false)} />}
+      <div
+        className={
+          page === 'resume'
+            ? 'mh-app mh-app--resume'
+            : CASE_STUDY_PAGES.includes(page)
+              ? 'mh-app mh-app--case'
+              : 'mh-app'
+        }
+      >
         <Header activePage={page} onNavigate={setPage} />
 
         <AnimatePresence mode="wait">
@@ -48,7 +74,19 @@ function App() {
             transition={pageTransition}
           >
             {page === 'work' ? (
-              <Work />
+              <Work onNavigate={setPage} />
+            ) : page === 'icrush-case' ? (
+              <IcrushCase onNavigate={setPage} />
+            ) : page === 'sproot-case' ? (
+              <SprootCase onNavigate={setPage} />
+            ) : page === 'sarang-case' ? (
+              <SarangCase onNavigate={setPage} />
+            ) : page === 'desoi-case' ? (
+              <DeSoiCase onNavigate={setPage} />
+            ) : page === 'vaultwin-case' ? (
+              <VaultwinCase onNavigate={setPage} />
+            ) : page === 'deadli-case' ? (
+              <DeadliComingSoon onNavigate={setPage} />
             ) : page === 'about' ? (
               <About onNavigate={setPage} />
             ) : page === 'playground' ? (

@@ -1,0 +1,66 @@
+.mh-coming-soon {
+  position: relative;
+  flex: 1;
+  display: flex;
+  min-height: 0;
+  padding: 0 clamp(16px, 3.5vw, 48px) clamp(16px, 3vh, 40px);
+}
+
+.mh-coming-soon__frame {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 0;
+  background: var(--color-burgundy);
+  border-radius: 44px;
+  overflow: hidden;
+  padding: clamp(32px, 6vh, 72px) clamp(24px, 6vw, 80px);
+}
+
+.mh-coming-soon__content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  max-width: 640px;
+  text-align: center;
+}
+
+.mh-coming-soon__title {
+  margin: 0;
+  font-size: clamp(28px, 4vw, 48px);
+  font-weight: 900;
+  line-height: 1.15;
+  letter-spacing: -0.5px;
+  color: #fbf3e7;
+}
+
+.mh-coming-soon__text {
+  margin: 0;
+  font-size: clamp(14px, 1.6vw, 17px);
+  line-height: 1.6;
+  color: #e5cfc0;
+}
+
+.mh-coming-soon__back {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 8px;
+  padding: 12px 22px;
+  background: #fff;
+  border: none;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-burgundy);
+  transition: transform 0.2s ease;
+}
+
+.mh-coming-soon__back:hover {
+  transform: translateY(-1px);
+}
